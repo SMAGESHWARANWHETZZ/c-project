@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{  
+   int n,m,pincode,b,p,c,g,l,date,penalty,totalbill,nop,i;
+   long int ph;
+   char fname[25],lname[25],address[50],place[20];
+   printf("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+   printf("@                                       @\n");
+   printf("@               WELCOME                 @\n");
+   printf("@                 TO                    @\n");
+   printf("@           SMART ELECTRICITY           @\n");
+   printf("@            BILL PROCESSOR             @\n");
+   printf("@              AND DISPLAY              @\n");
+   printf("@                                       @\n");
+   printf("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+   printf("press 0 to continue\n");
+   scanf("%d",&n);
+   printf("Number of persons to get bill\n");
+   scanf("%d",&nop);
+   for(i=0;i<nop;i++){
+   if (n==0){
+   printf("Enter your firstname sir\n"); 
+   scanf("%s",fname);
+   printf("Enter your lastname sir\n");
+   scanf("%s",lname);
+   printf("Enter address number\n");
+   scanf("%d",&m);
+   printf("Enter your permanent address without spaces\n");
+   scanf("%s",address);
+   printf("Enter your hometown\n");
+   scanf("%s",place);
+   printf("Enter your pincode\n");
+   scanf("%d",&pincode);
+   printf("Enter your phone number\n");
+   scanf("%ld",&ph);
+   printf("Enter the date you are paying\n");
+   scanf("%d",&date);
+   if (date>=11){ penalty=250;}
+   else penalty=0;
+   printf("Mention your consumption amount\n");
+   printf("press 1 for below 100 unit\n");
+   printf("press 2 for above 100 unit\n");
+   scanf("%d",&l);
+   if (l==1){
+   printf("Enter the units consumed\n");
+   scanf("%d",&b);
+   p=b*6;}
+   else if (l==2){
+   printf("Enter the units consumed\n");
+   scanf("%d",&c);
+   p=c*10;}
+   totalbill=p+penalty;}
+   printf("#############################################################################################################################\n");
+   printf("                                       TAMILNADU ELECTRICITY BOARD PROCESSED BILL                                            \n");
+   printf("#############################################################################################################################\n");
+   printf("                                                FIRSTNAME:%s                                                           \n",fname);
+   printf("                                                 LASTNAME:%s                                                           \n",lname);
+   printf("                                           ADDRESS NUMBER:%d                                    \n",m);
+   printf("                                       PERMANENET ADDRESS:%s                                                                                                      \n",address);
+   printf("                                                 HOMETOWN:%s                                                                                                       \n",place);
+   printf("                                                  PINCODE:%d                                                                                                      \n",pincode);
+   printf("                                             PHONE NUMBER:%ld                                                                                                     \n",ph);
+   printf("                                              BILL AMOUNT:%d                                                                                                      \n",p);
+   printf("                                           PENALTY AMOUNT:%d                               \n",penalty);
+   printf("                                                TOTALBILL:%d                               \n",totalbill);
+   printf("#############################################################################################################################\n");}
+}
